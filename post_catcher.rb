@@ -16,4 +16,17 @@ class PostCatcher < Sinatra::Base
     "post received"
   end
 
+  get "/ping" do
+    log(params.inspect)
+    "pong"
+  end
+
+  post "/ping" do
+    "pong"
+  end
+
+  get "/foo" do
+    %Q{{"foo":"bar"}}
+  end
+
 end
